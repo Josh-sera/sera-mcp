@@ -1,0 +1,41 @@
+{
+  "name": "sera-mcp",
+  "version": "0.4.0",
+  "description": "Multi-currency MCP server backed by Sera (stablecoin FX). Lets any agent discover currencies, quote, route, and execute stablecoin swaps through one standard tool interface.",
+  "type": "module",
+  "bin": {
+    "sera-mcp": "dist/index.js",
+    "sera": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "better-sqlite3": "^12.10.0",
+    "ethers": "^6.13.4",
+    "undici": "^6.20.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.7.5",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}
